@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,  
+    "typeRoots": [
+      "./../node_modules/@types"
+      ],
+    "types": [
+        "jasmine",
+        "node",
+        "angular",
+        "core-js"
+    ]
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "./../node_modules/*",
+    "./../src/main.aot.ts",
+    "aot/"
+  ]
+}
