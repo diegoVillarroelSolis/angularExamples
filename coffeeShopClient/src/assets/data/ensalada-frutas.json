@@ -1,0 +1,18 @@
+{
+    "data":[
+        {
+            "image":"ensaladass",
+            "name":"Malteada",
+            "price":5,
+            "category":"Ensalada de Frutas",
+            "detail":"Frutas de estacion yogurt y crema"
+        },
+        {
+            "image":"ensaladass",
+            "name":"Ensalada de frutas",
+            "price":5,
+            "category":"Ensalada de Frutas",
+            "detail":" Frutas  de estacion con yogurt"
+        }
+    ]
+}

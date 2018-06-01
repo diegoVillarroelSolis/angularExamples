@@ -1,0 +1,41 @@
+:host {
+	flex-grow: 1; 
+	justify-content: center;
+	align-items: center; 
+	height: 100%;
+    margin: 0;
+    padding: 70px 0 100px 0;   
+}   
+ #login-wrapper {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+} 
+
+ #login-wrapper #login-container {
+    
+    margin-top: 20px;
+    box-sizing: border-box;
+    height: 300px; 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    color: #4f575b;
+} 
+
+ #login-wrapper #login-container .title {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+} 
+  
+button{
+	padding: 5px 10px;
+	font-size: 18px;
+	outline: 0;
+}
+input {
+	padding: 10px 20px;
+	font-size: 20px;
+	outline: 0;
+}
+ 

@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "image":"jugoss",
+            "name":"Jugo de Platano",
+            "price":5,
+            "category":"Bebida Fria ",
+            "detail":"El jugo puede S/C leche."
+        },
+        {
+            "image":"jugoss",
+            "name":"Jugo de Frutilla",
+            "price":5,
+            "category":"Bebida Fria ",
+            "detail":"El jugo puede S/C leche."
+        },
+        {
+            "image":"jugoss",
+            "name":"Jugo de Naranja",
+            "price":5,
+            "category":"Bebida Fria ",
+            "detail":"zumo de naranja "
+        }
+    ]
+}

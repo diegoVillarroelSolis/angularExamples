@@ -1,0 +1,11 @@
+<p-dataList [value]="cars">
+    <p-header>Mi Pedido</p-header>
+    <p-footer>
+            <span>Total:</span>
+            <input type="text" pInputText placeholder="Total">
+            <span class="ui-inputgroup-addon">Bs</span> 
+            <button pButton type="button" class="ui-button-success" label="Registrar" (click)="orderRegistration($event)"></button>    </p-footer>
+    <ng-template let-car pTemplate="item">
+        <app-order></app-order>
+    </ng-template>
+</p-dataList>

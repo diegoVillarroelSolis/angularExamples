@@ -1,0 +1,18 @@
+{
+    "data":[
+        {
+            "image":"sandwich",
+            "name":"Sandwiches de Pavita",
+            "price":5,
+            "category":"Sandwiches",
+            "detail":"Sandwiches y aderesos"
+        },
+        {
+            "image":"sandwich",
+            "name":"Sandwiches",
+            "price":5,
+            "category":"Sandwiches",
+            "detail":"Sandwiches y aderesos"
+        }
+    ]
+}

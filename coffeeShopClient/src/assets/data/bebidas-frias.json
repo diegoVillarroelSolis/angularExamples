@@ -1,0 +1,39 @@
+{
+    "data":[
+        {
+            "image":"coca",
+            "name":"cocacola",
+            "price":5,
+            "category":"bebida",
+            "detail":"SD"
+        },
+        {
+            "image":"coca",
+            "name":"fanta",
+            "price":5,
+            "category":"bebida",
+            "detail":"SD"
+        },
+        {
+            "image":"coca",
+            "name":"sprite",
+            "price":5,
+            "category":"bebida",
+            "detail":"SD"
+        },
+        {
+            "image":"coca",
+            "name":"jugo",
+            "price":5,
+            "category":"bebida",
+            "detail":"SD"
+        },
+        {
+            "image":"coca",
+            "name":"jugo de Frutilla",
+            "price":5,
+            "category":"bebida",
+            "detail":"SD"
+        }
+    ]
+}

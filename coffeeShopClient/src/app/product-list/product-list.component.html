@@ -1,0 +1,32 @@
+<p-dataView [value]="products" [paginator]="true" [rows]="4" [layout]="'grid'" >
+    <p-header>
+        <div class="ui-helper-clearfix">
+            {{nameCategory}}
+        </div>
+    </p-header>
+    <ng-template let-product pTemplate="gridItem">
+        <div style="padding:.5em" class="ui-g-12 ui-md-3">
+             <div *ngIf="session,else noSession" >
+                <app-product [product]="product" (click)="selectProduct($event, product)"></app-product>    
+             </div>
+            <ng-template #noSession>
+                <app-product [product]="product"></app-product>    
+                
+            </ng-template>
+        </div>
+    </ng-template>
+</p-dataView>
+<p-dialog header="Detalles de producto" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" width="300" (onAfterHide)="onDialogHide()">
+    <div class="ui-g" *ngIf="selectedProduct ">
+        <div class="ui-g-12" style="text-align:center">
+            <img src="/src/assets/images/products/{{selectedProduct.image}}.png" width="60">
+        </div>
+        <div class="ui-g-4 ui-sm-6">Producto: </div>
+        <div class="ui-g-8 ui-sm-6"><b>{{selectedProduct.name}}</b></div> 
+        <div class="ui-g-4 ui-sm-6">Precio: </div>
+        <div class="ui-g-8 ui-sm-6"><b>{{selectedProduct.price}}</b></div> 
+        <div class="ui-g-4 ui-sm-6">Detalles: </div>
+        <div class="ui-g-8 ui-sm-6"><b>{{selectedProduct.description}}</b></div>       
+    </div> 
+</p-dialog> 
+

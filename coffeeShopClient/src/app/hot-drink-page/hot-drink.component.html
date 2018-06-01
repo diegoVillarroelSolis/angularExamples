@@ -1,0 +1,33 @@
+<section *ngIf="session; else loggedOut" >
+        <section id="loggedIn">
+            <div class="parent">
+                <div class="child">
+                    <button pButton type="button" class="ui-button-secondary fa fa-align-justify" label="Ver mi historial"></button>                    
+                </div>
+                <div class="child">
+                    <span> <b>Bienvenido al Coffe Shop  {{user.name}}, realiza tu pedido</b></span>
+                </div>
+                <div class="child">
+                    <button pButton type="button" class="ui-button-secondary" label="Salir" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i></button>     
+                </div>
+            </div>   
+        </section>  
+        <section id="contenido"  class="ui-g-8"> 
+            <app-product-list [selectedCategory]=3 [session]=true></app-product-list>
+        </section>
+        <aside class="ui-g-4">
+                <app-order-list></app-order-list>  
+        </aside> 
+</section>
+<ng-template #loggedOut>
+    <section >
+         <p><b>Bienvenido al Coffe Shop este es el menu del dia </b></p>           
+    </section>
+    <section>
+        <app-product-list [selectedCategory]=3></app-product-list>
+    </section>
+    <div class="ui-g-12 "  style="text-align:center">
+        <p><b>Ingrese su access card para iniciar con su pedido o si lo olvido presione "Olvide mi AC" </b></p>
+        <button pButton type="button" class="ui-button-primary" label="Olvide mi AC" [routerLink]="['/login']" ></button>        
+    </div>
+</ng-template>

@@ -1,0 +1,33 @@
+<div id="login-body">
+	<div id="login-wrapper">
+		<div id="login-container">
+			<span class="title">Ingrese el codigo de su Access Card:</span>
+			<div class="ui-g ui-fluid">
+				<form  id="login-form" #lForm="ngForm" [formGroup]="loginForm" (ngSubmit)="submitLogin()" novalidate>
+					<div class="ui-g-12">
+						<br>
+						<span class="ui-float-label">
+							<input id="float-input" type="password" size="30" pInputText autocomplete="off" formControlName="password" > 
+							<label for="float-input">Access Card</label>
+						</span>		
+						<p style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</p>
+        				<p style="color: red;" *ngIf="loginForm.controls.password.dirty && loginForm.controls.password.hasError('required')">El campo es requerido</p>
+        				<p style="color: red;" *ngIf="loginForm.controls.password.hasError('maxlength')">Debe introducir 5 digitos</p>
+        				<p style="color: red;" *ngIf="loginForm.controls.password.hasError('minlength')">Debe introducir 5 digitos</p>
+					</div>
+					<br>		
+					<br>		
+					<br>		
+					<div class="ui-g-12">
+						<div class="ui-g-6">
+							<button pButton type="submit" class="ui-button-success" label="Aceptar" form="login-form"></button>
+						</div>
+						<div class="ui-g-6">
+							<button pButton [routerLink]="'/juice'" type="button" class="ui-button-danger" label="Volver"></button>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>

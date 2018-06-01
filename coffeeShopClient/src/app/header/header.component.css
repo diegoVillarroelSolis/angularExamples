@@ -1,0 +1,15 @@
+header {
+	text-align: center;
+	padding:0;
+	background-image: url("/src/assets/images/header/prueba3.png");
+	background-size:200px;  
+	border-bottom: 2px solid #eee;
+}
+img:hover{
+	width: 110px;
+}
+nav{
+    background: orange;
+    height: 60px;
+}
+

@@ -1,0 +1,26 @@
+#contenido{
+    float: left;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+#contenido h2{
+    font-size:40px;
+    text-align: center;
+    line-height: 500px;
+} 
+
+aside{
+    margin-top: 10px ;
+    float:right;
+}
+.parent {
+    text-align: center;
+}
+.child {
+padding: 10px 120px;
+margin: 10px;
+display: inline-block;
+}
+
+
+

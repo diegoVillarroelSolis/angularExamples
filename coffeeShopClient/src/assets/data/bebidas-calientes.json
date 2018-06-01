@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "image":"te",
+            "name":"Te",
+            "price":5,
+            "category":"Bebida Caliente ",
+            "detail":"Te normal con azucar."
+        },
+        {
+            "image":"te",
+            "name":"Cafe",
+            "price":5,
+            "category":"Bebida Caliente ",
+            "detail":"Cafe express"
+        },
+        {
+            "image":"te",
+            "name":"Mate de manzanilla",
+            "price":5,
+            "category":"Bebida Caliente ",
+            "detail":"Mate de manzanilla"
+        }
+    ]
+}
