@@ -18,6 +18,7 @@ export class ProductListComponent {
 
   addToOrder(product : Product) : void{
     console.log("Event Binding at product");
+    this.productListService.removeProduct(product);
     this.orderListService.addProduct(product);
   }
 

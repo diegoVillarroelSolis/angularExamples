@@ -32,4 +32,12 @@ export class ProductListService {
     getProducts() : Observable<Product[]>{
        return of(this.products);
     }
+
+    removeProduct(product : Product) : void {
+      this.products.splice(this.products.indexOf(product),1);
+    }
+    
+    addProduct(product : Product): void {
+      this.products.push(product);
+    }
 }

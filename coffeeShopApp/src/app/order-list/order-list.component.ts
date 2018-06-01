@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OrderListService } from './order-list.service';
+import { ProductListService } from '../product-list/product-list.service';
 import { Product } from '../product/product.model';
 import {Observable} from 'rxjs';
 
@@ -25,7 +26,8 @@ export class OrderListComponent {
 
   detachFromOrder(product : Product) : void {
     this.orderListService.removeProduct(product);
+    this.productListService.addProduct(product);
   }
  
-  constructor(private orderListService: OrderListService) { }
+  constructor(private orderListService: OrderListService, private productListService : ProductListService) { }
 }

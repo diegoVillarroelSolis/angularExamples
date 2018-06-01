@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 })
 export class ProductComponent {
   @Input() product : Product;
+  @Input() isInAOrder : boolean;
 
   addToOrder(product : Product) : void{
     console.log("Event Binding at product");

@@ -6,7 +6,11 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>Agregar</button>
+        <div *ngIf="isInAOrder; else elseBlock">
+            <button mat-button>Retirar</button>
+        </div>
+        <ng-template #elseBlock>
+            <button mat-button (click)="">Agregar</button>
+        </ng-template>
     </mat-card-actions>
 </mat-card>
-  
