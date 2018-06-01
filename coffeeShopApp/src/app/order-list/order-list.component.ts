@@ -5,8 +5,8 @@ import {Observable} from 'rxjs';
 
 @Component({
   selector: 'order-list',
-  templateUrl: './order-list.html',
-  styleUrls: ['./order-list.css']
+  templateUrl: './order-list.component.html',
+  styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent {
   products : Product[];
@@ -21,6 +21,10 @@ export class OrderListComponent {
       err => console.error(err),
       () => console.log('done loading products')
     );
+  }
+
+  detachFromOrder(product : Product) : void {
+    this.orderListService.removeProduct(product);
   }
  
   constructor(private orderListService: OrderListService) { }

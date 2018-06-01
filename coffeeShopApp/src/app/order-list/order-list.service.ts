@@ -4,7 +4,7 @@ import {Product} from '../product/product.model'
   
 @Injectable()
 export class OrderListService {
-    products : Product[];
+    products : Product[] = [];
 
     addProduct(product : Product) : void {
       this.products.push(product);

@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductListService } from './product-list.service';
+import { OrderListService } from '../order-list/order-list.service';
 import { Product } from '../product/product.model';
 import {Observable} from 'rxjs';
 
 @Component({
   selector: 'product-list',
-  templateUrl: './product-list.html',
-  styleUrls: ['./product-list.css']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
   products : Product[];
 
   ngOnInit() {
     this.getProducts();
+  }
+
+  addToOrder(product : Product) : void{
+    console.log("Event Binding at product");
+    this.orderListService.addProduct(product);
   }
 
   getProducts() : void{
@@ -23,5 +29,5 @@ export class ProductListComponent {
     );
   }
  
-  constructor(private productListService: ProductListService) { }
+  constructor(private productListService: ProductListService, private orderListService : OrderListService) { }
 }
