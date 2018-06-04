@@ -1,0 +1,53 @@
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="fullwidth">
+          <input matInput type="text" placeholder="First name" id="firstname" [(ngModel)]="address.firstname" name="firstname">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="fullwidth">
+          <input matInput type="text" placeholder="Last name" id="lastname" [(ngModel)]="address.lastname" name="lastname">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <mat-form-field class="fullwidth">
+      <textarea matInput placeholder="Address" id="address" [(ngModel)]="address.address"></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="fullwidth">
+          <input matInput type="text" placeholder="city name" id="city" [(ngModel)]="address.city" name="city">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="fullwidth">
+          <input matInput type="text" placeholder="state name" id="state" [(ngModel)]="address.state" name="state">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="fullwidth">
+          <input matInput maxlength="5" #postalcode type="text" placeholder="Postal code" id="postalcode" [(ngModel)]="address.postalcode"
+            name="postalcode">
+          <mat-hint>
+            {{postalcode.value.length}} / 5
+          </mat-hint>
+        </mat-form-field>
+      </td>
+    </tr>
+
+  </table>
+
+  <p>
+    <button mat-raised-button>Submit</button>
+  </p>
+
+</form>
+
+

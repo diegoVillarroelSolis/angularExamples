@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -22,6 +23,7 @@ import { OrderListService } from './order-list/order-list.service';
     BrowserAnimationsModule,
     MatCardModule, 
     MatGridListModule,
+    MatListModule
   ],
   declarations: [
     AppComponent,

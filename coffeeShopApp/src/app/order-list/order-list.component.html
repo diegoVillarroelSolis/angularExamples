@@ -1,3 +1,5 @@
-<div *ngFor="let product of products">
-    <product [product]="product" [isInAOrder]="true" (click)="detachFromOrder(product)" ></product>
-</div>
+<mat-list class="app-class">
+    <mat-list-item *ngFor="let product of products">
+        <product [product]="product" [isInAOrder]="true" (click)="detachFromOrder(product)"></product>
+    </mat-list-item>
+</mat-list>
