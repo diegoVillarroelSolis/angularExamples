@@ -5,6 +5,7 @@ import {Product} from '../product/product.model'
 @Injectable()
 export class OrderListService {
     products : Product[] = [];
+    test: string = "Hello";
 
     addProduct(product : Product) : void {
       this.products.push(product);
@@ -18,5 +19,13 @@ export class OrderListService {
  
     getProducts() : Observable<Product[]>{
        return of(this.products);
+    }
+
+    calculateTotalAmount(): number{
+      let total = 0;  
+      this.products.forEach(p => {
+        total += p.price;
+      });
+      return total;
     }
 }

@@ -6,4 +6,11 @@
     background-image: url('https://www.servovendi.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/b/o/bote-de-camuflaje--lata-de-ocultaci_n-imitaci_n-refresco-_coca-cola_.png');
     background-size: cover;
   }
+
+  .image{
+    height: 350px;
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+}
   

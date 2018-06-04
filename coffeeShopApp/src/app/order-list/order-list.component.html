@@ -1,5 +1,14 @@
-<mat-list class="app-class">
+<!-- <mat-list class="app-class">
     <mat-list-item *ngFor="let product of products">
         <product [product]="product" [isInAOrder]="true" (click)="detachFromOrder(product)"></product>
     </mat-list-item>
-</mat-list>
+</mat-list> -->
+
+<div class="container" [ngClass]="{'container2':session}">
+    <article *ngFor= "let product of products" > 
+        <product [product]="product" [isInAOrder]="true" (click)="detachFromOrder(product)"></product>
+    </article>
+</div>
+<div>
+    <p>Total amount: {{calculateTotalAmount()}}</p>
+</div>

@@ -11,9 +11,11 @@ import {Observable} from 'rxjs';
 })
 export class OrderListComponent {
   products : Product[];
+  total: number;
 
   ngOnInit() {
     this.getProducts();
+    this.total = this.orderListService.calculateTotalAmount();
   }
 
   getProducts() : void{
@@ -27,6 +29,11 @@ export class OrderListComponent {
   detachFromOrder(product : Product) : void {
     this.orderListService.removeProduct(product);
     this.productListService.addProduct(product);
+  }
+
+  calculateTotalAmount(): number{
+    console.log(this.orderListService.calculateTotalAmount());
+    return this.orderListService.calculateTotalAmount();
   }
  
   constructor(private orderListService: OrderListService, private productListService : ProductListService) { }

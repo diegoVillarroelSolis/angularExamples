@@ -1,3 +1,26 @@
 .app-class .mat-list-item {
   height: auto;
 }
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ; 
+    overflow-y: auto;
+    height: 350px;
+    padding-top: 20px;
+}
+.container2{
+    float: left;
+    /* display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;  */
+    overflow-y: auto;
+    height: 350px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.container article{
+    height: 100px;
+    padding-bottom: 50px;
+}

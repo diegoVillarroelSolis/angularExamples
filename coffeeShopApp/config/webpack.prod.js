@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require("path");
@@ -35,17 +35,22 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ 
-      mangle: {
-        keep_fnames: true
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({ 
+    //   mangle: {
+    //     keep_fnames: true
+    //   }
+    // }),
     // AOT Plugin 
     new AotPlugin({
       tsConfigPath: './src/tsconfig.aot.json',
       entryModule: helpers.root('src/app/app.module.ts#AppModule')
     }),
-    new ExtractTextPlugin('[name].[hash].css'),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(ENV)
