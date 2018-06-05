@@ -8,6 +8,7 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
+    "outDir": "aot",
     "lib": ["dom","es2015"],
     "typeRoots": [
       "./../node_modules/@types"
@@ -21,7 +22,7 @@
     "src/aot/"
   ],
   "angularCompilerOptions": {
-    "genDir": "./aot",
+    "outDir": "./aot",
     "skipMetadataEmit": true,
     "files": [
       "./src/app/main.aot.ts"

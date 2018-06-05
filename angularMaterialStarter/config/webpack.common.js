@@ -56,12 +56,15 @@ module.exports = {
       {} // a map of your routes
     ),
 
-    // new webpack.optimize.splitChunks({
-    //   name: ['app', 'vendor', 'polyfills']
-    // }),
-
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ]
 };
