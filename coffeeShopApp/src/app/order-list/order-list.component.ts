@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OrderListService } from './order-list.service';
-import { ProductListService } from '../product-list/product-list.service';
 import { Product } from '../product/product.model';
 import {Observable} from 'rxjs';
 
@@ -11,11 +10,9 @@ import {Observable} from 'rxjs';
 })
 export class OrderListComponent {
   products : Product[];
-  total: number;
 
   ngOnInit() {
     this.getProducts();
-    this.total = this.orderListService.calculateTotalAmount();
   }
 
   getProducts() : void{
@@ -26,15 +23,10 @@ export class OrderListComponent {
     );
   }
 
-  detachFromOrder(product : Product) : void {
-    this.orderListService.removeProduct(product);
-    this.productListService.addProduct(product);
-  }
-
   calculateTotalAmount(): number{
     console.log(this.orderListService.calculateTotalAmount());
     return this.orderListService.calculateTotalAmount();
   }
  
-  constructor(private orderListService: OrderListService, private productListService : ProductListService) { }
+  constructor(private orderListService: OrderListService) { }
 }

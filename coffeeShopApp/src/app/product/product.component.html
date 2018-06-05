@@ -2,15 +2,15 @@
     <img mat-card-image src="https://www.carusopizza.cz/248-large_default/coca-cola-05l.jpg" class="image">
     <mat-card-content>
         <p>
-            Coca Cola.
+            {{product.name}}
         </p>
     </mat-card-content>
     <mat-card-actions>
         <div *ngIf="isInAOrder; else elseBlock">
-            <button mat-button>Retirar</button>
+            <button mat-button (click)="detachFromOrder(product)">Retirar</button>
         </div>
         <ng-template #elseBlock>
-            <button mat-button>Agregar</button>
+            <button mat-button (click)="addToOrder(product)">Agregar</button>
         </ng-template>
     </mat-card-actions>
 </mat-card>

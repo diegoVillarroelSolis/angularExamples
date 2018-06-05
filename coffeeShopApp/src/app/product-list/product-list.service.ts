@@ -6,22 +6,22 @@ import {Product} from '../product/product.model'
 export class ProductListService {
     products : Product[] = [
       {
-        name: "Coca Cola",
+        name: "Coca Cola 1",
         price: 6,
         imageUrl: ""
       },
       {
-        name: "Fanta",
+        name: "Fanta 2",
         price: 6,
         imageUrl: ""
       },
       {
-        name: "Sprite",
+        name: "Sprite 3",
         price: 6,
         imageUrl: ""
       },
       {
-        name: "Simba",
+        name: "Simba 4",
         price: 6,
         imageUrl: ""
       }
