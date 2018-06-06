@@ -1,20 +1,6 @@
-<!-- <mat-list class="app-class">
-    <mat-list-item *ngFor="let product of products">
-        <product [product]="product" [isInAOrder]="true" (click)="detachFromOrder(product)"></product>
-    </mat-list-item>
-</mat-list> -->
-
-<!-- 
-<div class="container">
-    <div *ngFor= "let product of products"> 
-        <div  id="element">
-        <product [product]="product" [isInAOrder]="true" ></product>
-        </div>
-    </div>
+<div>    
+    <p>Mi Pedido</p>
 </div>
-<div>
-    <p>Total: {{calculateTotalAmount()}}</p>
-</div> -->
 <div class="container">
     <mat-list class="app-class">
         <mat-list-item *ngFor="let product of products">
@@ -23,6 +9,6 @@
     </mat-list>
 </div>
 <div>
-    <p>Total: {{calculateTotalAmount()}} Bs.</p>
-    <button mat-raised-button color="primary">Registrar</button>
+    <p class="total">Total: {{calculateTotalAmount()}} Bs.</p>
+    <button mat-raised-button color="primary" class="total">Registrar</button>
 </div>

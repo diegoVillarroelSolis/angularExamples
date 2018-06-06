@@ -1,13 +1,20 @@
 .app-class .mat-list-item {
   height: auto;
-  text-align:center;
 }
 
 .container{
     text-align:center;
-    overflow-y: auto;
-    height: 500px;
-    padding: 20px;
-    margin: 100px;
-    border: 10px solid lightgray;
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+    height: 400px;
+    width: 200px;
+    border-bottom: 16px solid lightgray;
+    border-top: 16px solid lightgray;
+    border-left: 16px solid lightgray;
+    padding: 10px;
+}
+
+.total {
+    display: inline-block;
+    margin: 10px;
 }
