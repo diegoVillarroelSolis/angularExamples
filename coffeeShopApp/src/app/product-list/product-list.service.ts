@@ -6,21 +6,25 @@ import {Product} from '../product/product.model'
 export class ProductListService {
     products : Product[] = [
       {
+        id:1,
         name: "Coca Cola 1",
         price: 6,
         imageUrl: ""
       },
       {
+        id:2,
         name: "Fanta 2",
         price: 6,
         imageUrl: ""
       },
       {
+        id:3,
         name: "Sprite 3",
         price: 6,
         imageUrl: ""
       },
       {
+        id:4,
         name: "Simba 4",
         price: 6,
         imageUrl: ""

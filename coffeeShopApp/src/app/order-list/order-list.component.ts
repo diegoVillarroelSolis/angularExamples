@@ -17,7 +17,7 @@ export class OrderListComponent {
 
   getProducts() : void{
     this.orderListService.getProducts().subscribe(
-      data => { this.products = data },      
+      data => { this.products = data},      
       err => console.error(err),
       () => console.log('done loading products')
     );
@@ -26,6 +26,10 @@ export class OrderListComponent {
   calculateTotalAmount(): number{
     console.log(this.orderListService.calculateTotalAmount());
     return this.orderListService.calculateTotalAmount();
+  }
+
+  submitOrder(): void{
+    this.orderListService.submitOrder();
   }
  
   constructor(private orderListService: OrderListService) { }
