@@ -52,12 +52,11 @@ export class OrderListComponent {
         width: '250px',
         data: { message: "Esta seguro que desea registrar su pedido?"}
       });
-    }
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   this.animal = result;//call to service
-    // });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.orderListService.clearProducts();//call to service
+      });
+    }    
   }
 
   constructor(private orderListService: OrderListService, public dialog: MatDialog) {}

@@ -12,11 +12,17 @@ export class Order {
     }
 
     removeProduct(product : Product) : void {
-        this.products.splice(this.products.indexOf(product),1);
-        this.productsList.splice(this.productsList.indexOf(product.id),1);
+        let i: number = this.products.indexOf(product);            
+        this.products.splice(i,1);
+        this.productsList.splice(i,1);
     }
 
     getProducts() : Product[]{
        return this.products;
+    }
+
+    clearProducts(): void{
+        this.products.splice(0,this.products.length);
+        this.productsList.splice(0,this.productsList.length);
     }
 }

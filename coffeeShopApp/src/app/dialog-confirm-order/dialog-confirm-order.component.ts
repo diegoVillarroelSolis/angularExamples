@@ -21,7 +21,7 @@ export class DialogConfirmOrderComponent {
   openDialog(): void {
       let dialogRef = this.dialog.open(DialogConfirmLogoutComponent, {
         width: '250px',
-        data: { message: "Esta seguro que desea registrar su pedido?"}
+        data: { confirm: "Esta seguro que desea registrar su pedido?"}
       });
 
     // dialogRef.afterClosed().subscribe(result => {

@@ -43,6 +43,10 @@ export class OrderListService {
       return total;
     }
 
+    clearProducts(): void{
+      this.order.clearProducts();
+    }
+
     submitOrder(): Observable<any>{
       if(this.order.getProducts().length>0){
         return this.http.post<any>("http://localhost:57798/api/orders", this.order, httpOptions);
