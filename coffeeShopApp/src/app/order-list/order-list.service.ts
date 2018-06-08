@@ -49,7 +49,7 @@ export class OrderListService {
 
     submitOrder(): Observable<any>{
       if(this.order.getProducts().length>0){
-        return this.http.post<any>("http://localhost:57798/api/orders", this.order, httpOptions);
+        return this.http.post<any>("http://192.168.0.108:5000/api/orders", this.order, httpOptions);
       }
     }
 }

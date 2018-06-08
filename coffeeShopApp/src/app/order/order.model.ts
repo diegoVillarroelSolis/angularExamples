@@ -1,20 +1,23 @@
 import { Product } from "../product/product.model";
 
 export class Order {
+    id: number =1;
     userId: number =1;
-    products: Product[] = [];
-    productsList: number[] = [];
-    totalAmount: number;    
+    productList: number[] = [];
+    totalAmount: number=0; 
+    products: Product[] = [];   
 
     addProduct(product: Product){
         this.products.push(product);
-        this.productsList.push(product.id);
+        this.productList.push(product.id);
+        this.totalAmount+=product.price;
     }
 
     removeProduct(product : Product) : void {
         let i: number = this.products.indexOf(product);            
         this.products.splice(i,1);
-        this.productsList.splice(i,1);
+        this.productList.splice(i,1);
+        this.totalAmount-=product.price;
     }
 
     getProducts() : Product[]{
@@ -23,6 +26,7 @@ export class Order {
 
     clearProducts(): void{
         this.products.splice(0,this.products.length);
-        this.productsList.splice(0,this.productsList.length);
+        this.productList.splice(0,this.productList.length);
+        this.totalAmount=0;
     }
 }

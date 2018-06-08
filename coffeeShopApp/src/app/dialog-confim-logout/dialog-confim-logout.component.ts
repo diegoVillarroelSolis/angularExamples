@@ -16,4 +16,7 @@ export class DialogConfirmLogoutComponent {
     this.dialogRef.close();
   }
 
+  logout(): void{
+    console.log("logout!");//call to service 
+  }
 }

@@ -35,27 +35,27 @@ export class OrderListComponent {
     return this.orderListService.calculateTotalAmount();
   }
 
-  submitOrder(): void {
-    if (this.products.length > 0) {
-      this.orderListService
-        .submitOrder()
-        .subscribe(
-          data => console.log(data),
-          error => console.log("An error has ocurred!")
-        );
-    }
-  }
+  // submitOrder(): void {
+  //   if (this.products.length > 0) {
+  //     this.orderListService
+  //       .submitOrder()
+  //       .subscribe(
+  //         data => console.log(data, "Succesfull request"),
+  //         error => console.log("An error has ocurred!")
+  //       );
+  //   }
+  // }
 
   openDialog(): void {
     if(this.products.length>0){
       let dialogRef = this.dialog.open(DialogConfirmOrderComponent, {
         width: '250px',
-        data: { message: "Esta seguro que desea registrar su pedido?"}
+        data: { confirm: true}
       });
-      dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
-        this.orderListService.clearProducts();//call to service
-      });
+      // dialogRef.afterClosed().subscribe(result => {
+      //   console.log('The dialog was closed');
+      //   this.orderListService.clearProducts();//call to service
+      // });
     }    
   }
 
