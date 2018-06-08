@@ -2,14 +2,14 @@ import {Component, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
-  selector: 'dialog-confirm-order',
-  templateUrl: 'dialog-confirm-order.component.html',
-  styleUrls: ['dialog-confirm-order.component.css'],
+  selector: 'dialog-confirm-logout',
+  templateUrl: 'dialog-confirm-logout.component.html',
+  styleUrls: ['dialog-confirm-logout.component.css'],
 })
-export class DialogConfirmOrderComponent {
+export class DialogConfirmLogoutComponent {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogConfirmOrderComponent>,
+    public dialogRef: MatDialogRef<DialogConfirmLogoutComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {

@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { OrderListComponent } from './order-list/order-list.component';
-
+import { DialogConfirmOrderComponent } from './dialog-confirm-order/dialog-confirm-order.component';
 
 import { ProductListService } from './product-list/product-list.service';
 import { OrderListService } from './order-list/order-list.service';
@@ -33,7 +33,11 @@ import { OrderListService } from './order-list/order-list.service';
     AppComponent,
     ProductListComponent,
     ProductComponent,
-    OrderListComponent
+    OrderListComponent,
+    DialogConfirmOrderComponent
+  ],
+  entryComponents: [    
+    DialogConfirmOrderComponent
   ],
   providers: [
     ProductListService,

@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { OrderListService } from './order-list.service';
 import { Product } from '../product/product.model';
+import { DialogConfirmOrderComponent } from '../dialog-confirm-order/dialog-confirm-order.component';
+
 import {Observable} from 'rxjs';
 import { error } from 'util';
+
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: "order-list",
@@ -42,5 +46,19 @@ export class OrderListComponent {
     }
   }
 
-  constructor(private orderListService: OrderListService) {}
+  openDialog(): void {
+    if(this.products.length>0){
+      let dialogRef = this.dialog.open(DialogConfirmOrderComponent, {
+        width: '250px',
+        data: { message: "Esta seguro que desea registrar su pedido?"}
+      });
+    }
+
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    //   this.animal = result;//call to service
+    // });
+  }
+
+  constructor(private orderListService: OrderListService, public dialog: MatDialog) {}
 }
