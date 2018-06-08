@@ -1,7 +1,7 @@
 import { Product } from "../product/product.model";
 
 export class Order {
-    userId: number;
+    userId: number =1;
     products: Product[] = [];
     productsList: number[] = [];
     totalAmount: number;    

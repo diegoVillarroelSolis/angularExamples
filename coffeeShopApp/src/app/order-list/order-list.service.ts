@@ -6,9 +6,7 @@ import { Order } from '../order/order.model';
 import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-  })
+  headers: new HttpHeaders({'Content-Type':  'application/json',})
 };
   
 @Injectable()
@@ -45,9 +43,9 @@ export class OrderListService {
       return total;
     }
 
-    submitOrder(): void{
+    submitOrder(): Observable<any>{
       if(this.order.getProducts().length>0){
-        this.http.post<Order>("http://localhost:57798/api/orders", this.order, httpOptions);
+        return this.http.post<any>("http://localhost:57798/api/orders", this.order, httpOptions);
       }
     }
 }
