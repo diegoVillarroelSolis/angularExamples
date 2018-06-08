@@ -3,8 +3,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'dialog-confirm-logout',
-  templateUrl: 'dialog-confirm-logout.component.html',
-  styleUrls: ['dialog-confirm-logout.component.css'],
+  templateUrl: 'dialog-confim-logout.component.html',
+  styleUrls: ['dialog-confim-logout.component.css'],
 })
 export class DialogConfirmLogoutComponent {
 
