@@ -1,5 +1,4 @@
 var webpackMerge = require('webpack-merge');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require("path");
@@ -33,9 +32,9 @@ module.exports = webpackMerge(commonConfig, {
           },
           "angular2-template-loader"
         ]
-      }
+      }, 
     ]
-  },  
+  },
 
   devServer: {
     historyApiFallback: true,

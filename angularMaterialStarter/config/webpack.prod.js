@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require("path");
@@ -21,7 +20,7 @@ module.exports = webpackMerge(commonConfig, {
     path: helpers.root('aot'),
     publicPath: '/',
     filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+    chunkFilename: '[id].[hash].chunk.js',
   },
 
   module: {
@@ -29,7 +28,7 @@ module.exports = webpackMerge(commonConfig, {
       {
         test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
         loader: '@ngtools/webpack'
-      }
+      },  
     ]
   },
 
@@ -46,11 +45,11 @@ module.exports = webpackMerge(commonConfig, {
         minimize: false 
       }
     }),
-    
     new AngularCompilerPlugin({
       tsConfigPath: './src/tsconfig.aot.json',
       entryModule: helpers.root('src/app/app.module.ts#AppModule'),
-      sourceMap: true
-    })
+      sourceMap: true,
+      //skipCodeGeneration: true
+    }), 
   ]
 });

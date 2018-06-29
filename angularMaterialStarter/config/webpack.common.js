@@ -1,7 +1,8 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var helpers = require('./helpers');
+//const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -20,17 +21,20 @@ module.exports = {
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: helpers.root('src', 'app'),
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw-loader'
+        exclude: /node_modules/,
+        loaders: ['raw-loader', 'sass-loader'] 
       }
     ]
   },
@@ -47,24 +51,22 @@ module.exports = {
     }
 },
 
-  plugins: [
-    // Workaround for angular/angular#11580
+  plugins: [    
+    // new CopyWebpackPlugin([
+    //   { from: 'src/assets/images/products', to: 'src/assets/images/products' },
+    //   { from: 'src/assets/data', to: 'src/assets/data' }
+    // ]),
     new webpack.ContextReplacementPlugin(
-      // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)@angular/,
-      helpers.root('./src'), // location of your src
-      {} // a map of your routes
+      helpers.root('./src'), 
+      {} 
     ),
-
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "css/[name].css",
+      chunkFilename: "css/[id].css"
     })
   ]
 };
