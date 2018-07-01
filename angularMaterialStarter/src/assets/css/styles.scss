@@ -1,4 +1,19 @@
-body {
-  background: brown;
-  color: white;
-}
+// body {
+//   background: brown;
+//   color: white;
+// }
+// $color: red!default;
+// $color2: blue!default;
+// $color4: green!default;
+
+// .div {
+//   background-color: $color2;
+// }
+@import 'lib/variables';
+@import 'lib/mixins';
+@import 'tablas';
+@import 'base/botones';
+@import 'base/tipografia';
+@import 'components/grids';
+@import 'layouts/layouts';
+@import 'components/untilities';
