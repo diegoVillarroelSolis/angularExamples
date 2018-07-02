@@ -5,6 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
+import '../assets/css/styles.scss';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
