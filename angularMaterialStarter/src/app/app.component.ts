@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import {Observable} from 'rxjs';
 
-import '../assets/css/styles.scss';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @Component({
   selector: 'my-app',
@@ -9,10 +11,4 @@ import '../assets/css/styles.scss';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public welcomeMsg: any;
-
-  ngOnInit() {
-  }
- 
-  constructor() { }
 }
